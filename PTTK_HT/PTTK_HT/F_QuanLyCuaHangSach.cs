@@ -10,14 +10,13 @@ namespace PTTK_HT
 
             InitializeComponent();
         }
-
-
+        //Hiển thị panel
         public void ShowPanel(Panel panelToShow)
         {
             panelToShow.Visible = true;
             gbCapNhat.Visible = false;
         }
-
+        //Ẩn panel
         public void HidePanel(Panel panelToHide)
         {
             panelToHide.Visible = false;
@@ -26,6 +25,7 @@ namespace PTTK_HT
 
         private void F_QuanLyCuaHangSach_Load(object sender, EventArgs e)
         {
+            clbTimKiemSach.SetItemChecked(0, true);
         }
         //Cập nhật sách
         private void btnCapNhatSach_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace PTTK_HT
         private void button19_Click(object sender, EventArgs e)
         {
             HidePanel(panel_CapNhatDonHang);
+        }
+
+        private void btnThoat_CapNhat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

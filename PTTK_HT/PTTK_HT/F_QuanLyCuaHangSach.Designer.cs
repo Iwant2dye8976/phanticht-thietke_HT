@@ -31,6 +31,7 @@
             this.tcQuanlyCuahang = new System.Windows.Forms.TabControl();
             this.tpCapNhat = new System.Windows.Forms.TabPage();
             this.gbCapNhat = new System.Windows.Forms.GroupBox();
+            this.btnThoat_CapNhat = new System.Windows.Forms.Button();
             this.btnCapNhatDonHang = new System.Windows.Forms.Button();
             this.btnCapNhatNV = new System.Windows.Forms.Button();
             this.btnCapNhatHD = new System.Windows.Forms.Button();
@@ -117,8 +118,26 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tpTimKiem = new System.Windows.Forms.TabPage();
+            this.dgTimKiemSach = new System.Windows.Forms.DataGridView();
+            this.btnThoat_TK = new System.Windows.Forms.Button();
+            this.btnTimKiem_TK = new System.Windows.Forms.Button();
+            this.tbTacGia_TK = new System.Windows.Forms.TextBox();
+            this.tbNXB_TK = new System.Windows.Forms.TextBox();
+            this.tbTheLoai_TK = new System.Windows.Forms.TextBox();
+            this.tbTenSach_TK = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.clbTimKiemSach = new System.Windows.Forms.CheckedListBox();
             this.tpQuanLy = new System.Windows.Forms.TabPage();
             this.tpThongKe = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
             this.tcQuanlyCuahang.SuspendLayout();
             this.tpCapNhat.SuspendLayout();
             this.gbCapNhat.SuspendLayout();
@@ -132,6 +151,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel_CapNhatNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tpTimKiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTimKiemSach)).BeginInit();
+            this.tpQuanLy.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcQuanlyCuahang
@@ -167,6 +191,7 @@
             // 
             // gbCapNhat
             // 
+            this.gbCapNhat.Controls.Add(this.btnThoat_CapNhat);
             this.gbCapNhat.Controls.Add(this.btnCapNhatDonHang);
             this.gbCapNhat.Controls.Add(this.btnCapNhatNV);
             this.gbCapNhat.Controls.Add(this.btnCapNhatHD);
@@ -174,9 +199,20 @@
             this.gbCapNhat.Controls.Add(this.btnCapNhatSach);
             this.gbCapNhat.Location = new System.Drawing.Point(0, 0);
             this.gbCapNhat.Name = "gbCapNhat";
-            this.gbCapNhat.Size = new System.Drawing.Size(230, 234);
+            this.gbCapNhat.Size = new System.Drawing.Size(230, 271);
             this.gbCapNhat.TabIndex = 6;
             this.gbCapNhat.TabStop = false;
+            // 
+            // btnThoat_CapNhat
+            // 
+            this.btnThoat_CapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat_CapNhat.Location = new System.Drawing.Point(6, 224);
+            this.btnThoat_CapNhat.Name = "btnThoat_CapNhat";
+            this.btnThoat_CapNhat.Size = new System.Drawing.Size(213, 35);
+            this.btnThoat_CapNhat.TabIndex = 52;
+            this.btnThoat_CapNhat.Text = "Thoát";
+            this.btnThoat_CapNhat.UseVisualStyleBackColor = true;
+            this.btnThoat_CapNhat.Click += new System.EventHandler(this.btnThoat_CapNhat_Click);
             // 
             // btnCapNhatDonHang
             // 
@@ -1116,6 +1152,19 @@
             // 
             // tpTimKiem
             // 
+            this.tpTimKiem.Controls.Add(this.dgTimKiemSach);
+            this.tpTimKiem.Controls.Add(this.btnThoat_TK);
+            this.tpTimKiem.Controls.Add(this.btnTimKiem_TK);
+            this.tpTimKiem.Controls.Add(this.tbTacGia_TK);
+            this.tpTimKiem.Controls.Add(this.tbNXB_TK);
+            this.tpTimKiem.Controls.Add(this.tbTheLoai_TK);
+            this.tpTimKiem.Controls.Add(this.tbTenSach_TK);
+            this.tpTimKiem.Controls.Add(this.label3);
+            this.tpTimKiem.Controls.Add(this.label5);
+            this.tpTimKiem.Controls.Add(this.label2);
+            this.tpTimKiem.Controls.Add(this.label1);
+            this.tpTimKiem.Controls.Add(this.label4);
+            this.tpTimKiem.Controls.Add(this.clbTimKiemSach);
             this.tpTimKiem.Location = new System.Drawing.Point(4, 34);
             this.tpTimKiem.Margin = new System.Windows.Forms.Padding(6);
             this.tpTimKiem.Name = "tpTimKiem";
@@ -1125,8 +1174,147 @@
             this.tpTimKiem.Text = "Tìm kiếm";
             this.tpTimKiem.UseVisualStyleBackColor = true;
             // 
+            // dgTimKiemSach
+            // 
+            this.dgTimKiemSach.AllowUserToAddRows = false;
+            this.dgTimKiemSach.AllowUserToDeleteRows = false;
+            this.dgTimKiemSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgTimKiemSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTimKiemSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTimKiemSach.Location = new System.Drawing.Point(3, 162);
+            this.dgTimKiemSach.Name = "dgTimKiemSach";
+            this.dgTimKiemSach.Size = new System.Drawing.Size(890, 218);
+            this.dgTimKiemSach.TabIndex = 12;
+            // 
+            // btnThoat_TK
+            // 
+            this.btnThoat_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat_TK.Location = new System.Drawing.Point(726, 94);
+            this.btnThoat_TK.Name = "btnThoat_TK";
+            this.btnThoat_TK.Size = new System.Drawing.Size(105, 44);
+            this.btnThoat_TK.TabIndex = 11;
+            this.btnThoat_TK.Text = "Thoát";
+            this.btnThoat_TK.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiem_TK
+            // 
+            this.btnTimKiem_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTimKiem_TK.Location = new System.Drawing.Point(726, 28);
+            this.btnTimKiem_TK.Name = "btnTimKiem_TK";
+            this.btnTimKiem_TK.Size = new System.Drawing.Size(105, 44);
+            this.btnTimKiem_TK.TabIndex = 10;
+            this.btnTimKiem_TK.Text = "Tìm kiếm";
+            this.btnTimKiem_TK.UseVisualStyleBackColor = true;
+            // 
+            // tbTacGia_TK
+            // 
+            this.tbTacGia_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbTacGia_TK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTacGia_TK.Location = new System.Drawing.Point(418, 123);
+            this.tbTacGia_TK.Name = "tbTacGia_TK";
+            this.tbTacGia_TK.ReadOnly = true;
+            this.tbTacGia_TK.Size = new System.Drawing.Size(252, 33);
+            this.tbTacGia_TK.TabIndex = 9;
+            // 
+            // tbNXB_TK
+            // 
+            this.tbNXB_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbNXB_TK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNXB_TK.Location = new System.Drawing.Point(418, 84);
+            this.tbNXB_TK.Name = "tbNXB_TK";
+            this.tbNXB_TK.ReadOnly = true;
+            this.tbNXB_TK.Size = new System.Drawing.Size(252, 33);
+            this.tbNXB_TK.TabIndex = 8;
+            // 
+            // tbTheLoai_TK
+            // 
+            this.tbTheLoai_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbTheLoai_TK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTheLoai_TK.Location = new System.Drawing.Point(418, 45);
+            this.tbTheLoai_TK.Name = "tbTheLoai_TK";
+            this.tbTheLoai_TK.ReadOnly = true;
+            this.tbTheLoai_TK.Size = new System.Drawing.Size(252, 33);
+            this.tbTheLoai_TK.TabIndex = 7;
+            // 
+            // tbTenSach_TK
+            // 
+            this.tbTenSach_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbTenSach_TK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTenSach_TK.Location = new System.Drawing.Point(418, 6);
+            this.tbTenSach_TK.Name = "tbTenSach_TK";
+            this.tbTenSach_TK.Size = new System.Drawing.Size(252, 33);
+            this.tbTenSach_TK.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(284, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Thể loại";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(284, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Tác giả";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(284, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên sách";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tìm kiếm sách";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(284, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Nhà xuất bản";
+            // 
+            // clbTimKiemSach
+            // 
+            this.clbTimKiemSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.clbTimKiemSach.FormattingEnabled = true;
+            this.clbTimKiemSach.Items.AddRange(new object[] {
+            "Theo tên sách",
+            "Theo thể loại sách",
+            "Theo nhà xuất bản",
+            "Theo tác giả"});
+            this.clbTimKiemSach.Location = new System.Drawing.Point(14, 40);
+            this.clbTimKiemSach.Name = "clbTimKiemSach";
+            this.clbTimKiemSach.Size = new System.Drawing.Size(180, 116);
+            this.clbTimKiemSach.TabIndex = 0;
+            // 
             // tpQuanLy
             // 
+            this.tpQuanLy.Controls.Add(this.panel1);
+            this.tpQuanLy.Controls.Add(this.groupBox1);
             this.tpQuanLy.Location = new System.Drawing.Point(4, 34);
             this.tpQuanLy.Margin = new System.Windows.Forms.Padding(6);
             this.tpQuanLy.Name = "tpQuanLy";
@@ -1144,6 +1332,53 @@
             this.tpThongKe.TabIndex = 3;
             this.tpThongKe.Text = "Thống kê";
             this.tpThongKe.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 109);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(4, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 35);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Quản lý sách";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(4, 59);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(214, 35);
+            this.button2.TabIndex = 49;
+            this.button2.Text = "Quản lý nhân viên";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(890, 377);
+            this.panel1.TabIndex = 1;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(3, 18);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(82, 25);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Mã sách";
             // 
             // F_QuanLyCuaHangSach
             // 
@@ -1174,6 +1409,13 @@
             this.panel_CapNhatNV.ResumeLayout(false);
             this.panel_CapNhatNV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tpTimKiem.ResumeLayout(false);
+            this.tpTimKiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTimKiemSach)).EndInit();
+            this.tpQuanLy.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1271,5 +1513,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox clbTimKiemSach;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnThoat_TK;
+        private System.Windows.Forms.Button btnTimKiem_TK;
+        private System.Windows.Forms.TextBox tbTacGia_TK;
+        private System.Windows.Forms.TextBox tbNXB_TK;
+        private System.Windows.Forms.TextBox tbTheLoai_TK;
+        private System.Windows.Forms.TextBox tbTenSach_TK;
+        private System.Windows.Forms.DataGridView dgTimKiemSach;
+        private System.Windows.Forms.Button btnThoat_CapNhat;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
