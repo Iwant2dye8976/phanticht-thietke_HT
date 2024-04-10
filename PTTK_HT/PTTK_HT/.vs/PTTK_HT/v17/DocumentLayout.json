@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\f_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|solutionrelative:f_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\f_quanlycuahangsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|solutionrelative:f_quanlycuahangsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|d:\\phantich\u0026thietke_ht\\pttk_ht\\pttk_ht\\check\\check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|solutionrelative:check\\check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\f_quanlycuahangsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|solutionrelative:f_quanlycuahangsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\f_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2D8D2A-7611-4D3B-AE96-CA2CE5DDF4B7}|PTTK_HT.csproj|solutionrelative:f_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "F_DangNhap.cs",
+              "DocumentMoniker": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_DangNhap.cs",
+              "RelativeDocumentMoniker": "F_DangNhap.cs",
+              "ToolTip": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_DangNhap.cs",
+              "RelativeToolTip": "F_DangNhap.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAA3wDUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:20:53.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "check.cs",
+              "DocumentMoniker": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\Check\\check.cs",
+              "RelativeDocumentMoniker": "Check\\check.cs",
+              "ToolTip": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\Check\\check.cs",
+              "RelativeToolTip": "Check\\check.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:20:53.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "F_QuanLyCuaHangSach.cs",
+              "DocumentMoniker": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_QuanLyCuaHangSach.cs",
+              "RelativeDocumentMoniker": "F_QuanLyCuaHangSach.cs",
+              "ToolTip": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_QuanLyCuaHangSach.cs",
+              "RelativeToolTip": "F_QuanLyCuaHangSach.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAywFMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:20:53.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "F_QuanLyCuaHangSach.cs [Design]",
+              "DocumentMoniker": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_QuanLyCuaHangSach.cs",
+              "RelativeDocumentMoniker": "F_QuanLyCuaHangSach.cs",
+              "ToolTip": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_QuanLyCuaHangSach.cs [Design]",
+              "RelativeToolTip": "F_QuanLyCuaHangSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:20:54.333Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "F_DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_DangNhap.cs",
+              "RelativeDocumentMoniker": "F_DangNhap.cs",
+              "ToolTip": "D:\\Phantich\u0026thietke_HT\\PTTK_HT\\PTTK_HT\\F_DangNhap.cs [Design]",
+              "RelativeToolTip": "F_DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:20:54.341Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
