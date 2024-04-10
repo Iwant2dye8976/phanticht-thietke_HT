@@ -1,5 +1,5 @@
-//Tạo CSDL
 CREATE DATABASE QLSACH
+
 CREATE TABLE SACH
 (
 	MSACH nchar(10) not null primary key,
