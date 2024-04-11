@@ -28,7 +28,7 @@ namespace QLSACH
                 using(SqlConnection conn = new SqlConnection(connectionStr))
                 {
                     conn.Open();
-                    string count = "SELECT COUNT(*) FROM NV WHERE UserName=@UserName AND Pass_Word=@Pass_Word";
+                    string count = "SELECT COUNT(*) FROM NV WHERE UserName COLLATE SQL_Latin1_General_CP1_CS_AS = @UserName AND Pass_Word COLLATE SQL_Latin1_General_CP1_CS_AS = @Pass_Word";
                     using (SqlCommand cmd = new SqlCommand(count, conn))
                     {
                         cmd.Parameters.AddWithValue("@UserName", tbUserName_Login.Text.Trim());

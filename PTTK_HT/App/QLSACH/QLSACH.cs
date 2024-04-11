@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace QLSACH
         private void QLSACH_Load(object sender, EventArgs e)
         {
             dgSach_CN.DataSource = Load_Sach();
+            cbxTimKiem.SelectedIndex = 0;
         }
         private void tcCapNhat_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,7 +49,7 @@ namespace QLSACH
                 tbTacGia_CN.Text = dt.Rows[index][2].ToString().Trim();
                 tbNXB_CN.Text = dt.Rows[index][3].ToString().Trim();
                 tbGia_CN.Text = dt.Rows[index][4].ToString().Trim();
-                dtpNgayCN.Value = Convert.ToDateTime(dt.Rows[index][5]);
+                dtpNgayCN.Value = DateTime.ParseExact(dt.Rows[index][5].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
             }
         }
         private void Clear_Sach()
@@ -66,7 +68,7 @@ namespace QLSACH
             using (SqlConnection conn = new SqlConnection(connectionStr))
             {
                 conn.Open();
-                string fill = "SELECT MSACH AS N'Mã sách', TenSach AS N'Tên sách', TacGia AS N'Tác giả', NXB, Gia AS N'Giá',NgayCP AS N'Ngày cập nhật' FROM SACH";
+                string fill = "SELECT MSACH AS N'Mã sách', TenSach AS N'Tên sách', TacGia AS N'Tác giả', NXB, Gia AS N'Giá',FORMAT(NgayCP, 'dd/MM/yyyy') AS N'Ngày cập nhật' FROM SACH";
                 using (SqlDataAdapter da = new SqlDataAdapter(fill, conn))
                 {
                     dt = new DataTable();
@@ -85,7 +87,7 @@ namespace QLSACH
                     using (SqlConnection conn = new SqlConnection(connectionStr))
                     {
                         conn.Open();
-                        string NgayCN = DateTime.Parse(dtpNgayCN.Text).ToString();
+                        string NgayCN = DateTime.Today.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                         string insert = "INSERT INTO SACH (MSACH,TenSach,TacGia,NXB,Gia,NgayCP) VALUES(@MSACH,@TenSach,@TacGia,@NXB,@Gia,@NgayCP)";
                         using (SqlCommand cmd = new SqlCommand(insert, conn))
                         {
@@ -156,7 +158,7 @@ namespace QLSACH
                         using (SqlConnection conn = new SqlConnection(connectionStr))
                         {
                             conn.Open();
-                            string NgayCN = DateTime.Today.ToString();
+                            string NgayCN = DateTime.Today.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                             string update = "UPDATE SACH SET TenSach=@TenSach,TacGia=@TacGia,NXB=@NXB,Gia=@Gia,NgayCP=@NgayCP WHERE MSACH=@MSACH";
                             using (SqlCommand cmd = new SqlCommand(update, conn))
                             {
@@ -215,7 +217,7 @@ namespace QLSACH
             {
                 tbHoTenKH_CN.Text = dt.Rows[index][0].ToString().Trim();
                 tbDiaChiKH_CN.Text = dt.Rows[index][1].ToString().Trim();
-                dtpNgaySinh_KH_CN.Value = Convert.ToDateTime(dt.Rows[index][2]);
+                dtpNgaySinh_KH_CN.Value = DateTime.ParseExact(dt.Rows[index][2].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 tbSDT_KH_CN.Text = dt.Rows[index][3].ToString().Trim();
             }
         }
@@ -224,7 +226,7 @@ namespace QLSACH
             using (SqlConnection conn = new SqlConnection(connectionStr))
             {
                 conn.Open();
-                string fill = "SELECT HoTen AS N'Họ tên',DiaChi AS N'Địa chỉ',NgaySinh AS N'Ngày sinh', SDT AS N'Số điện thoại' FROM KH";
+                string fill = "SELECT HoTen AS N'Họ tên',DiaChi AS N'Địa chỉ',FORMAT(NgaySinh, 'dd/MM/yyyy') AS N'Ngày sinh', SDT AS N'Số điện thoại' FROM KH";
                 using (SqlDataAdapter da = new SqlDataAdapter(fill, connectionStr))
                 {
                     dt = new DataTable();
@@ -391,13 +393,13 @@ namespace QLSACH
         {
             try
             {
-                if(tbMaNV_CN.Text.Trim().Length > 0 && tbUsername_CN.Text.Trim().Length > 0 && tbPassword_CN.Text.Trim().Length > 0)
+                if (tbMaNV_CN.Text.Trim().Length > 0 && tbUsername_CN.Text.Trim().Length > 0 && tbPassword_CN.Text.Trim().Length > 0)
                 {
-                    using(SqlConnection conn = new SqlConnection(connectionStr))
+                    using (SqlConnection conn = new SqlConnection(connectionStr))
                     {
                         conn.Open();
                         string insert = "INSERT INTO NV (MaNV,UserName,Pass_Word) VALUES (@MaNV,@UserName,@Pass_Word)";
-                        using(SqlCommand cmd = new SqlCommand(insert,conn))
+                        using (SqlCommand cmd = new SqlCommand(insert, conn))
                         {
                             cmd.Parameters.AddWithValue("@MaNV", tbMaNV_CN.Text.Trim());
                             cmd.Parameters.AddWithValue("@UserName", tbUsername_CN.Text.Trim());
@@ -410,7 +412,7 @@ namespace QLSACH
                     dgNV_CN.DataSource = Load_NV();
                 }
                 else
-                    MessageBox.Show("Thông tin không hợp lệ!","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SqlException ex)
             {
@@ -420,13 +422,13 @@ namespace QLSACH
 
         private void btnXoaNV_CN_Click(object sender, EventArgs e)
         {
-            if(index >= 0)
+            if (index >= 0)
             {
-                using(SqlConnection conn = new SqlConnection(connectionStr))
+                using (SqlConnection conn = new SqlConnection(connectionStr))
                 {
                     conn.Open();
                     string delete = "DELETE NV WHERE MaNV=@MaNV";
-                    using(SqlCommand cmd = new SqlCommand(delete,conn))
+                    using (SqlCommand cmd = new SqlCommand(delete, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaNV", tbMaNV_CN.Text.Trim());
                         cmd.ExecuteNonQuery();
@@ -444,7 +446,7 @@ namespace QLSACH
         {
             try
             {
-                if(index >= 0)
+                if (index >= 0)
                 {
                     if (tbMaNV_CN.Text.Trim().Length > 0 && tbUsername_CN.Text.Trim().Length > 0 && tbPassword_CN.Text.Trim().Length > 0)
                     {
@@ -475,10 +477,72 @@ namespace QLSACH
                 MessageBox.Show("Lỗi: ", ex.ToString());
             }
         }
-
         private void btnResetNV_CN_Click(object sender, EventArgs e)
         {
             Clear_NV();
+        }
+
+        //Tìm kiếm sách
+        private int f = 0;
+        private void cbxTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbxTimKiem.SelectedIndex)
+            {
+                case 0: { tbTimKiem.PlaceholderText = "Nhập mã sách, tên sách,tác giả hoặc nhà xuất bản"; f = 0; break; }
+                case 1: { tbTimKiem.PlaceholderText = "Nhập số điện thoại"; f = 1; break; }
+                case 2: { tbTimKiem.PlaceholderText = "Nhập mã nhân viên"; f = 2; break; }
+                default: { tbTimKiem.Clear(); break; }
+            }
+        }
+
+        private void tbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionStr))
+            {
+                conn.Open();
+                string findstr, find = tbTimKiem.Text.Trim();
+                if (!string.IsNullOrWhiteSpace(tbTimKiem.Text))
+                {
+                    dt = new DataTable();
+                    switch (f)
+                    {
+                        case 0:
+                            {
+                                findstr = $"SELECT MSACH AS N'Mã sách', TenSach AS N'Tên sách', TacGia AS N'Tác giả', NXB, Gia AS N'Giá',NgayCP AS N'Ngày cập nhật' FROM SACH WHERE MSACH='{find}' OR TenSach LIKE N'%{find}%' OR TacGia Like N'%{find}%' OR NXB LIKE N'%{find}%'";
+                                using (SqlDataAdapter da = new SqlDataAdapter(findstr, conn))
+                                {
+                                    da.Fill(dt);
+                                    dgTimKiem.DataSource = dt;
+                                }
+                                break;
+                            }
+                        case 1:
+                            {
+                                findstr = $"SELECT HoTen AS N'Họ tên',DiaChi AS N'Địa chỉ',NgaySinh AS N'Ngày sinh', SDT AS N'Số điện thoại' FROM KH WHERE SDT LIKE '%{find}%'";
+                                using (SqlDataAdapter da = new SqlDataAdapter(findstr, conn))
+                                {
+                                    da.Fill(dt);
+                                    dgTimKiem.DataSource = dt;
+                                }
+                                break;
+                            }
+                        case 2:
+                            {
+                                findstr = $"SELECT MaNV AS N'Mã nhân viên',UserName AS 'Username',Pass_Word AS 'Password' FROM NV WHERE MaNV LIKE'%{find}%'";
+                                using (SqlDataAdapter da = new SqlDataAdapter(findstr, conn))
+                                {
+                                    da.Fill(dt);
+                                    dgTimKiem.DataSource = dt;
+                                }
+                                break;
+                            }
+                    }
+                }
+                else
+                {
+                    dgTimKiem.DataSource = null;
+                }
+            }
         }
     }
 }
