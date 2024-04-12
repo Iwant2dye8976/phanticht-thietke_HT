@@ -104,28 +104,16 @@
             tpHoaDon = new TabPage();
             tcHoaDon = new TabControl();
             tpTaoHD = new TabPage();
-            textBox9 = new TextBox();
-            label52 = new Label();
             button1 = new Button();
             button2 = new Button();
             label42 = new Label();
             textBox1 = new TextBox();
             label43 = new Label();
             textBox2 = new TextBox();
-            label44 = new Label();
-            textBox3 = new TextBox();
-            label45 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
             textBox8 = new TextBox();
             label46 = new Label();
             label47 = new Label();
-            label48 = new Label();
-            label49 = new Label();
-            label50 = new Label();
             label51 = new Label();
             tpTaoDH = new TabPage();
             label53 = new Label();
@@ -142,6 +130,10 @@
             tpCapNhat = new TabPage();
             tcCapNhat = new TabControl();
             tpCapNhatSach = new TabPage();
+            btnReset_CN = new Button();
+            btnSua_CN = new Button();
+            btnXoa_CN = new Button();
+            btnThem_CN = new Button();
             btnResetSach_CN = new Button();
             btnSuaSach_CN = new Button();
             btnXoaSach_CN = new Button();
@@ -185,7 +177,6 @@
             label10 = new Label();
             label13 = new Label();
             label14 = new Label();
-            tpCapNhatHD = new TabPage();
             tpTimKiem = new TabPage();
             cbxTimKiem = new ComboBox();
             tbTimKiem = new TextBox();
@@ -193,11 +184,9 @@
             tpThongKe = new TabPage();
             tcThongKe = new TabControl();
             tpThongKeSach = new TabPage();
-            tpThongKeKH = new TabPage();
-            btnReset_CN = new Button();
-            btnSua_CN = new Button();
-            btnXoa_CN = new Button();
-            btnThem_CN = new Button();
+            label44 = new Label();
+            dgThongKeSach = new DataGridView();
+            cbxLoaiThongKe = new ComboBox();
             tcMain.SuspendLayout();
             tpTaoPhieu.SuspendLayout();
             tcTaoPhieu.SuspendLayout();
@@ -222,6 +211,8 @@
             ((System.ComponentModel.ISupportInitialize)dgTimKiem).BeginInit();
             tpThongKe.SuspendLayout();
             tcThongKe.SuspendLayout();
+            tpThongKeSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgThongKeSach).BeginInit();
             SuspendLayout();
             // 
             // tcMain
@@ -299,7 +290,7 @@
             // 
             btnResetPhieuXuat.Anchor = AnchorStyles.Bottom;
             btnResetPhieuXuat.ForeColor = SystemColors.ActiveCaptionText;
-            btnResetPhieuXuat.Location = new Point(516, 433);
+            btnResetPhieuXuat.Location = new Point(516, 445);
             btnResetPhieuXuat.Name = "btnResetPhieuXuat";
             btnResetPhieuXuat.Size = new Size(106, 42);
             btnResetPhieuXuat.TabIndex = 49;
@@ -310,7 +301,7 @@
             // 
             btnTaoPhieuXuat.Anchor = AnchorStyles.Bottom;
             btnTaoPhieuXuat.ForeColor = SystemColors.ActiveCaptionText;
-            btnTaoPhieuXuat.Location = new Point(341, 433);
+            btnTaoPhieuXuat.Location = new Point(341, 445);
             btnTaoPhieuXuat.Name = "btnTaoPhieuXuat";
             btnTaoPhieuXuat.Size = new Size(106, 42);
             btnTaoPhieuXuat.TabIndex = 48;
@@ -515,10 +506,10 @@
             tpPhieuTraSach.Controls.Add(tbMaPhieuTra);
             tpPhieuTraSach.Controls.Add(label26);
             tpPhieuTraSach.Controls.Add(label31);
-            tpPhieuTraSach.Location = new Point(4, 30);
+            tpPhieuTraSach.Location = new Point(4, 24);
             tpPhieuTraSach.Name = "tpPhieuTraSach";
             tpPhieuTraSach.Padding = new Padding(3);
-            tpPhieuTraSach.Size = new Size(962, 587);
+            tpPhieuTraSach.Size = new Size(962, 593);
             tpPhieuTraSach.TabIndex = 1;
             tpPhieuTraSach.Text = "Phiếu trả sách";
             tpPhieuTraSach.UseVisualStyleBackColor = true;
@@ -546,7 +537,7 @@
             // 
             btnResetPhieuTra.Anchor = AnchorStyles.Bottom;
             btnResetPhieuTra.ForeColor = SystemColors.ActiveCaptionText;
-            btnResetPhieuTra.Location = new Point(516, 466);
+            btnResetPhieuTra.Location = new Point(516, 472);
             btnResetPhieuTra.Name = "btnResetPhieuTra";
             btnResetPhieuTra.Size = new Size(106, 42);
             btnResetPhieuTra.TabIndex = 70;
@@ -557,7 +548,7 @@
             // 
             btnTaoPhieuTra.Anchor = AnchorStyles.Bottom;
             btnTaoPhieuTra.ForeColor = SystemColors.ActiveCaptionText;
-            btnTaoPhieuTra.Location = new Point(341, 466);
+            btnTaoPhieuTra.Location = new Point(341, 472);
             btnTaoPhieuTra.Name = "btnTaoPhieuTra";
             btnTaoPhieuTra.Size = new Size(106, 42);
             btnTaoPhieuTra.TabIndex = 69;
@@ -649,10 +640,10 @@
             tpPhieuNhapSach.Controls.Add(tbMaPhieuNhap);
             tpPhieuNhapSach.Controls.Add(label30);
             tpPhieuNhapSach.Controls.Add(label36);
-            tpPhieuNhapSach.Location = new Point(4, 30);
+            tpPhieuNhapSach.Location = new Point(4, 24);
             tpPhieuNhapSach.Name = "tpPhieuNhapSach";
             tpPhieuNhapSach.Padding = new Padding(3);
-            tpPhieuNhapSach.Size = new Size(962, 587);
+            tpPhieuNhapSach.Size = new Size(962, 593);
             tpPhieuNhapSach.TabIndex = 2;
             tpPhieuNhapSach.Text = "Phiếu nhập sách";
             tpPhieuNhapSach.UseVisualStyleBackColor = true;
@@ -661,7 +652,7 @@
             // 
             btnResetPhieuNhap.Anchor = AnchorStyles.Bottom;
             btnResetPhieuNhap.ForeColor = SystemColors.ActiveCaptionText;
-            btnResetPhieuNhap.Location = new Point(516, 466);
+            btnResetPhieuNhap.Location = new Point(516, 472);
             btnResetPhieuNhap.Name = "btnResetPhieuNhap";
             btnResetPhieuNhap.Size = new Size(106, 42);
             btnResetPhieuNhap.TabIndex = 70;
@@ -672,7 +663,7 @@
             // 
             btnTaoPhieuNhap.Anchor = AnchorStyles.Bottom;
             btnTaoPhieuNhap.ForeColor = SystemColors.ActiveCaptionText;
-            btnTaoPhieuNhap.Location = new Point(341, 466);
+            btnTaoPhieuNhap.Location = new Point(341, 472);
             btnTaoPhieuNhap.Name = "btnTaoPhieuNhap";
             btnTaoPhieuNhap.Size = new Size(106, 42);
             btnTaoPhieuNhap.TabIndex = 69;
@@ -799,10 +790,10 @@
             tpPhieuKiemSach.Controls.Add(tbMaPhieuKiemKe);
             tpPhieuKiemSach.Controls.Add(label37);
             tpPhieuKiemSach.Controls.Add(label38);
-            tpPhieuKiemSach.Location = new Point(4, 30);
+            tpPhieuKiemSach.Location = new Point(4, 24);
             tpPhieuKiemSach.Name = "tpPhieuKiemSach";
             tpPhieuKiemSach.Padding = new Padding(3);
-            tpPhieuKiemSach.Size = new Size(962, 587);
+            tpPhieuKiemSach.Size = new Size(962, 593);
             tpPhieuKiemSach.TabIndex = 3;
             tpPhieuKiemSach.Text = "Phiếu kiểm sách";
             tpPhieuKiemSach.UseVisualStyleBackColor = true;
@@ -811,7 +802,7 @@
             // 
             btnResetPhieuKiemKe.Anchor = AnchorStyles.Bottom;
             btnResetPhieuKiemKe.ForeColor = SystemColors.ActiveCaptionText;
-            btnResetPhieuKiemKe.Location = new Point(516, 401);
+            btnResetPhieuKiemKe.Location = new Point(516, 407);
             btnResetPhieuKiemKe.Name = "btnResetPhieuKiemKe";
             btnResetPhieuKiemKe.Size = new Size(106, 42);
             btnResetPhieuKiemKe.TabIndex = 83;
@@ -822,7 +813,7 @@
             // 
             btnTaoPhieeuKiemKe.Anchor = AnchorStyles.Bottom;
             btnTaoPhieeuKiemKe.ForeColor = SystemColors.ActiveCaptionText;
-            btnTaoPhieeuKiemKe.Location = new Point(341, 401);
+            btnTaoPhieeuKiemKe.Location = new Point(341, 407);
             btnTaoPhieeuKiemKe.Name = "btnTaoPhieeuKiemKe";
             btnTaoPhieeuKiemKe.Size = new Size(106, 42);
             btnTaoPhieeuKiemKe.TabIndex = 82;
@@ -912,10 +903,10 @@
             tpPhieuThongKe.Controls.Add(tbMaPhieuThongKe);
             tpPhieuThongKe.Controls.Add(label39);
             tpPhieuThongKe.Controls.Add(label40);
-            tpPhieuThongKe.Location = new Point(4, 30);
+            tpPhieuThongKe.Location = new Point(4, 24);
             tpPhieuThongKe.Name = "tpPhieuThongKe";
             tpPhieuThongKe.Padding = new Padding(3);
-            tpPhieuThongKe.Size = new Size(962, 587);
+            tpPhieuThongKe.Size = new Size(962, 593);
             tpPhieuThongKe.TabIndex = 4;
             tpPhieuThongKe.Text = "Phiếu thống kê";
             tpPhieuThongKe.UseVisualStyleBackColor = true;
@@ -943,7 +934,7 @@
             // 
             btnResetPhieuThongKe.Anchor = AnchorStyles.Bottom;
             btnResetPhieuThongKe.ForeColor = SystemColors.ActiveCaptionText;
-            btnResetPhieuThongKe.Location = new Point(516, 433);
+            btnResetPhieuThongKe.Location = new Point(516, 439);
             btnResetPhieuThongKe.Name = "btnResetPhieuThongKe";
             btnResetPhieuThongKe.Size = new Size(106, 42);
             btnResetPhieuThongKe.TabIndex = 92;
@@ -954,7 +945,7 @@
             // 
             btnTaoPhieuThongKe.Anchor = AnchorStyles.Bottom;
             btnTaoPhieuThongKe.ForeColor = SystemColors.ActiveCaptionText;
-            btnTaoPhieuThongKe.Location = new Point(341, 433);
+            btnTaoPhieuThongKe.Location = new Point(341, 439);
             btnTaoPhieuThongKe.Name = "btnTaoPhieuThongKe";
             btnTaoPhieuThongKe.Size = new Size(106, 42);
             btnTaoPhieuThongKe.TabIndex = 91;
@@ -1034,9 +1025,9 @@
             // tpHoaDon
             // 
             tpHoaDon.Controls.Add(tcHoaDon);
-            tpHoaDon.Location = new Point(4, 30);
+            tpHoaDon.Location = new Point(4, 24);
             tpHoaDon.Name = "tpHoaDon";
-            tpHoaDon.Size = new Size(976, 627);
+            tpHoaDon.Size = new Size(976, 633);
             tpHoaDon.TabIndex = 4;
             tpHoaDon.Text = "Hóa đơn";
             tpHoaDon.UseVisualStyleBackColor = true;
@@ -1049,66 +1040,35 @@
             tcHoaDon.Location = new Point(0, 0);
             tcHoaDon.Name = "tcHoaDon";
             tcHoaDon.SelectedIndex = 0;
-            tcHoaDon.Size = new Size(976, 627);
+            tcHoaDon.Size = new Size(976, 633);
             tcHoaDon.TabIndex = 0;
             // 
             // tpTaoHD
             // 
-            tpTaoHD.Controls.Add(textBox9);
-            tpTaoHD.Controls.Add(label52);
             tpTaoHD.Controls.Add(button1);
             tpTaoHD.Controls.Add(button2);
             tpTaoHD.Controls.Add(label42);
             tpTaoHD.Controls.Add(textBox1);
             tpTaoHD.Controls.Add(label43);
             tpTaoHD.Controls.Add(textBox2);
-            tpTaoHD.Controls.Add(label44);
-            tpTaoHD.Controls.Add(textBox3);
-            tpTaoHD.Controls.Add(label45);
             tpTaoHD.Controls.Add(dateTimePicker1);
-            tpTaoHD.Controls.Add(textBox4);
-            tpTaoHD.Controls.Add(textBox5);
-            tpTaoHD.Controls.Add(textBox6);
-            tpTaoHD.Controls.Add(textBox7);
             tpTaoHD.Controls.Add(textBox8);
             tpTaoHD.Controls.Add(label46);
             tpTaoHD.Controls.Add(label47);
-            tpTaoHD.Controls.Add(label48);
-            tpTaoHD.Controls.Add(label49);
-            tpTaoHD.Controls.Add(label50);
             tpTaoHD.Controls.Add(label51);
             tpTaoHD.Location = new Point(4, 30);
             tpTaoHD.Name = "tpTaoHD";
             tpTaoHD.Padding = new Padding(3);
-            tpTaoHD.Size = new Size(968, 593);
+            tpTaoHD.Size = new Size(968, 599);
             tpTaoHD.TabIndex = 0;
             tpTaoHD.Text = "Tạo hóa đơn";
             tpTaoHD.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            textBox9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(626, 209);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(220, 29);
-            textBox9.TabIndex = 72;
-            // 
-            // label52
-            // 
-            label52.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label52.AutoSize = true;
-            label52.Location = new Point(511, 257);
-            label52.Name = "label52";
-            label52.Size = new Size(36, 21);
-            label52.TabIndex = 71;
-            label52.Text = "Giá:";
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom;
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(519, 484);
+            button1.Location = new Point(519, 399);
             button1.Name = "button1";
             button1.Size = new Size(106, 42);
             button1.TabIndex = 70;
@@ -1119,7 +1079,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(344, 484);
+            button2.Location = new Point(344, 399);
             button2.Name = "button2";
             button2.Size = new Size(106, 42);
             button2.TabIndex = 69;
@@ -1141,7 +1101,7 @@
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(626, 388);
+            textBox1.Location = new Point(629, 262);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(220, 29);
@@ -1151,7 +1111,7 @@
             // 
             label43.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label43.AutoSize = true;
-            label43.Location = new Point(511, 390);
+            label43.Location = new Point(514, 264);
             label43.Name = "label43";
             label43.Size = new Size(78, 21);
             label43.TabIndex = 66;
@@ -1161,39 +1121,10 @@
             // 
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(626, 297);
+            textBox2.Location = new Point(629, 211);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(220, 29);
             textBox2.TabIndex = 65;
-            // 
-            // label44
-            // 
-            label44.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label44.AutoSize = true;
-            label44.Location = new Point(510, 211);
-            label44.Name = "label44";
-            label44.Size = new Size(76, 21);
-            label44.TabIndex = 64;
-            label44.Text = "Số lượng:";
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(250, 341);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(220, 29);
-            textBox3.TabIndex = 63;
-            // 
-            // label45
-            // 
-            label45.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label45.AutoSize = true;
-            label45.Location = new Point(122, 257);
-            label45.Name = "label45";
-            label45.Size = new Size(70, 21);
-            label45.TabIndex = 62;
-            label45.Text = "Mã sách:";
             // 
             // dateTimePicker1
             // 
@@ -1201,52 +1132,16 @@
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             dateTimePicker1.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(626, 341);
+            dateTimePicker1.Location = new Point(248, 264);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(220, 29);
             dateTimePicker1.TabIndex = 61;
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(626, 253);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(220, 29);
-            textBox4.TabIndex = 60;
-            // 
-            // textBox5
-            // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(250, 388);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(220, 29);
-            textBox5.TabIndex = 59;
-            // 
-            // textBox6
-            // 
-            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(250, 297);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(220, 29);
-            textBox6.TabIndex = 58;
-            // 
-            // textBox7
-            // 
-            textBox7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(250, 253);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(220, 29);
-            textBox7.TabIndex = 57;
             // 
             // textBox8
             // 
             textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(250, 209);
+            textBox8.Location = new Point(248, 209);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(220, 29);
             textBox8.TabIndex = 56;
@@ -1255,7 +1150,7 @@
             // 
             label46.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label46.AutoSize = true;
-            label46.Location = new Point(511, 347);
+            label46.Location = new Point(120, 270);
             label46.Name = "label46";
             label46.Size = new Size(75, 21);
             label46.TabIndex = 55;
@@ -1265,47 +1160,17 @@
             // 
             label47.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label47.AutoSize = true;
-            label47.Location = new Point(511, 299);
+            label47.Location = new Point(514, 213);
             label47.Name = "label47";
             label47.Size = new Size(39, 21);
             label47.TabIndex = 54;
             label47.Text = "VAT:";
             // 
-            // label48
-            // 
-            label48.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label48.AutoSize = true;
-            label48.Location = new Point(135, 390);
-            label48.Name = "label48";
-            label48.Size = new Size(43, 21);
-            label48.TabIndex = 53;
-            label48.Text = "NXB:";
-            // 
-            // label49
-            // 
-            label49.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label49.AutoSize = true;
-            label49.Location = new Point(122, 343);
-            label49.Name = "label49";
-            label49.Size = new Size(59, 21);
-            label49.TabIndex = 52;
-            label49.Text = "Tác giả:";
-            // 
-            // label50
-            // 
-            label50.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            label50.AutoSize = true;
-            label50.Location = new Point(122, 303);
-            label50.Name = "label50";
-            label50.Size = new Size(71, 21);
-            label50.TabIndex = 51;
-            label50.Text = "Tên sách:";
-            // 
             // label51
             // 
             label51.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label51.AutoSize = true;
-            label51.Location = new Point(122, 211);
+            label51.Location = new Point(120, 211);
             label51.Name = "label51";
             label51.Size = new Size(97, 21);
             label51.TabIndex = 50;
@@ -1324,10 +1189,10 @@
             tpTaoDH.Controls.Add(textBox18);
             tpTaoDH.Controls.Add(label58);
             tpTaoDH.Controls.Add(label63);
-            tpTaoDH.Location = new Point(4, 30);
+            tpTaoDH.Location = new Point(4, 24);
             tpTaoDH.Name = "tpTaoDH";
             tpTaoDH.Padding = new Padding(3);
-            tpTaoDH.Size = new Size(968, 593);
+            tpTaoDH.Size = new Size(968, 599);
             tpTaoDH.TabIndex = 1;
             tpTaoDH.Text = "Tạo đơn hàng";
             tpTaoDH.UseVisualStyleBackColor = true;
@@ -1347,7 +1212,7 @@
             // 
             button3.Anchor = AnchorStyles.Bottom;
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(519, 383);
+            button3.Location = new Point(519, 389);
             button3.Name = "button3";
             button3.Size = new Size(106, 42);
             button3.TabIndex = 93;
@@ -1358,7 +1223,7 @@
             // 
             button4.Anchor = AnchorStyles.Bottom;
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(344, 383);
+            button4.Location = new Point(344, 389);
             button4.Name = "button4";
             button4.Size = new Size(106, 42);
             button4.TabIndex = 92;
@@ -1447,11 +1312,11 @@
             // tpCapNhat
             // 
             tpCapNhat.Controls.Add(tcCapNhat);
-            tpCapNhat.Location = new Point(4, 30);
+            tpCapNhat.Location = new Point(4, 24);
             tpCapNhat.Margin = new Padding(4);
             tpCapNhat.Name = "tpCapNhat";
             tpCapNhat.Padding = new Padding(4);
-            tpCapNhat.Size = new Size(976, 627);
+            tpCapNhat.Size = new Size(976, 633);
             tpCapNhat.TabIndex = 0;
             tpCapNhat.Text = "Cập nhật";
             tpCapNhat.UseVisualStyleBackColor = true;
@@ -1461,12 +1326,11 @@
             tcCapNhat.Controls.Add(tpCapNhatSach);
             tcCapNhat.Controls.Add(tpCapNhatKH);
             tcCapNhat.Controls.Add(tpCapNhatNV);
-            tcCapNhat.Controls.Add(tpCapNhatHD);
             tcCapNhat.Dock = DockStyle.Fill;
             tcCapNhat.Location = new Point(4, 4);
             tcCapNhat.Name = "tcCapNhat";
             tcCapNhat.SelectedIndex = 0;
-            tcCapNhat.Size = new Size(968, 619);
+            tcCapNhat.Size = new Size(968, 625);
             tcCapNhat.TabIndex = 0;
             tcCapNhat.SelectedIndexChanged += tcCapNhat_SelectedIndexChanged;
             // 
@@ -1496,15 +1360,59 @@
             tpCapNhatSach.Location = new Point(4, 30);
             tpCapNhatSach.Name = "tpCapNhatSach";
             tpCapNhatSach.Padding = new Padding(3);
-            tpCapNhatSach.Size = new Size(960, 585);
+            tpCapNhatSach.Size = new Size(960, 591);
             tpCapNhatSach.TabIndex = 0;
             tpCapNhatSach.Text = "Cập nhật sách";
             tpCapNhatSach.UseVisualStyleBackColor = true;
             // 
+            // btnReset_CN
+            // 
+            btnReset_CN.Anchor = AnchorStyles.Bottom;
+            btnReset_CN.Location = new Point(621, 558);
+            btnReset_CN.Name = "btnReset_CN";
+            btnReset_CN.Size = new Size(110, 39);
+            btnReset_CN.TabIndex = 71;
+            btnReset_CN.Text = "Reset";
+            btnReset_CN.UseVisualStyleBackColor = true;
+            btnReset_CN.Click += btnResetSach_CN_Click;
+            // 
+            // btnSua_CN
+            // 
+            btnSua_CN.Anchor = AnchorStyles.Bottom;
+            btnSua_CN.Location = new Point(487, 558);
+            btnSua_CN.Name = "btnSua_CN";
+            btnSua_CN.Size = new Size(110, 39);
+            btnSua_CN.TabIndex = 70;
+            btnSua_CN.Text = "Sửa";
+            btnSua_CN.UseVisualStyleBackColor = true;
+            btnSua_CN.Click += btnSuaSach_CN_Click;
+            // 
+            // btnXoa_CN
+            // 
+            btnXoa_CN.Anchor = AnchorStyles.Bottom;
+            btnXoa_CN.Location = new Point(355, 558);
+            btnXoa_CN.Name = "btnXoa_CN";
+            btnXoa_CN.Size = new Size(110, 39);
+            btnXoa_CN.TabIndex = 69;
+            btnXoa_CN.Text = "Xóa";
+            btnXoa_CN.UseVisualStyleBackColor = true;
+            btnXoa_CN.Click += btnXoaSach_CN_Click;
+            // 
+            // btnThem_CN
+            // 
+            btnThem_CN.Anchor = AnchorStyles.Bottom;
+            btnThem_CN.Location = new Point(230, 558);
+            btnThem_CN.Name = "btnThem_CN";
+            btnThem_CN.Size = new Size(110, 39);
+            btnThem_CN.TabIndex = 68;
+            btnThem_CN.Text = "Thêm";
+            btnThem_CN.UseVisualStyleBackColor = true;
+            btnThem_CN.Click += btnThemSach_CN_Click;
+            // 
             // btnResetSach_CN
             // 
             btnResetSach_CN.Anchor = AnchorStyles.Bottom;
-            btnResetSach_CN.Location = new Point(628, 693);
+            btnResetSach_CN.Location = new Point(628, 711);
             btnResetSach_CN.Name = "btnResetSach_CN";
             btnResetSach_CN.Size = new Size(110, 39);
             btnResetSach_CN.TabIndex = 67;
@@ -1515,7 +1423,7 @@
             // btnSuaSach_CN
             // 
             btnSuaSach_CN.Anchor = AnchorStyles.Bottom;
-            btnSuaSach_CN.Location = new Point(494, 693);
+            btnSuaSach_CN.Location = new Point(494, 711);
             btnSuaSach_CN.Name = "btnSuaSach_CN";
             btnSuaSach_CN.Size = new Size(110, 39);
             btnSuaSach_CN.TabIndex = 66;
@@ -1526,7 +1434,7 @@
             // btnXoaSach_CN
             // 
             btnXoaSach_CN.Anchor = AnchorStyles.Bottom;
-            btnXoaSach_CN.Location = new Point(362, 693);
+            btnXoaSach_CN.Location = new Point(362, 711);
             btnXoaSach_CN.Name = "btnXoaSach_CN";
             btnXoaSach_CN.Size = new Size(110, 39);
             btnXoaSach_CN.TabIndex = 65;
@@ -1537,7 +1445,7 @@
             // btnThemSach_CN
             // 
             btnThemSach_CN.Anchor = AnchorStyles.Bottom;
-            btnThemSach_CN.Location = new Point(237, 693);
+            btnThemSach_CN.Location = new Point(237, 711);
             btnThemSach_CN.Name = "btnThemSach_CN";
             btnThemSach_CN.Size = new Size(110, 39);
             btnThemSach_CN.TabIndex = 64;
@@ -1557,7 +1465,7 @@
             dgSach_CN.Name = "dgSach_CN";
             dgSach_CN.ReadOnly = true;
             dgSach_CN.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgSach_CN.Size = new Size(954, 385);
+            dgSach_CN.Size = new Size(954, 403);
             dgSach_CN.TabIndex = 29;
             dgSach_CN.CellContentClick += dgSach_CN_CellContentClick;
             // 
@@ -1692,10 +1600,10 @@
             tpCapNhatKH.Controls.Add(lable12);
             tpCapNhatKH.Controls.Add(label11);
             tpCapNhatKH.Controls.Add(label12);
-            tpCapNhatKH.Location = new Point(4, 30);
+            tpCapNhatKH.Location = new Point(4, 24);
             tpCapNhatKH.Name = "tpCapNhatKH";
             tpCapNhatKH.Padding = new Padding(3);
-            tpCapNhatKH.Size = new Size(960, 585);
+            tpCapNhatKH.Size = new Size(960, 591);
             tpCapNhatKH.TabIndex = 1;
             tpCapNhatKH.Text = "Cập nhật khách hàng";
             tpCapNhatKH.UseVisualStyleBackColor = true;
@@ -1703,7 +1611,7 @@
             // btnResetKH_CN
             // 
             btnResetKH_CN.Anchor = AnchorStyles.Bottom;
-            btnResetKH_CN.Location = new Point(621, 537);
+            btnResetKH_CN.Location = new Point(621, 543);
             btnResetKH_CN.Name = "btnResetKH_CN";
             btnResetKH_CN.Size = new Size(110, 39);
             btnResetKH_CN.TabIndex = 50;
@@ -1714,7 +1622,7 @@
             // btnSuaKH_CN
             // 
             btnSuaKH_CN.Anchor = AnchorStyles.Bottom;
-            btnSuaKH_CN.Location = new Point(487, 537);
+            btnSuaKH_CN.Location = new Point(487, 543);
             btnSuaKH_CN.Name = "btnSuaKH_CN";
             btnSuaKH_CN.Size = new Size(110, 39);
             btnSuaKH_CN.TabIndex = 49;
@@ -1725,7 +1633,7 @@
             // btnXoaKH_CN
             // 
             btnXoaKH_CN.Anchor = AnchorStyles.Bottom;
-            btnXoaKH_CN.Location = new Point(355, 537);
+            btnXoaKH_CN.Location = new Point(355, 543);
             btnXoaKH_CN.Name = "btnXoaKH_CN";
             btnXoaKH_CN.Size = new Size(110, 39);
             btnXoaKH_CN.TabIndex = 48;
@@ -1736,7 +1644,7 @@
             // btnThemKH_CN
             // 
             btnThemKH_CN.Anchor = AnchorStyles.Bottom;
-            btnThemKH_CN.Location = new Point(230, 537);
+            btnThemKH_CN.Location = new Point(230, 543);
             btnThemKH_CN.Name = "btnThemKH_CN";
             btnThemKH_CN.Size = new Size(110, 39);
             btnThemKH_CN.TabIndex = 47;
@@ -1756,7 +1664,7 @@
             dgKH_CN.Name = "dgKH_CN";
             dgKH_CN.ReadOnly = true;
             dgKH_CN.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgKH_CN.Size = new Size(954, 380);
+            dgKH_CN.Size = new Size(954, 386);
             dgKH_CN.TabIndex = 46;
             dgKH_CN.CellContentClick += dgKH_CN_CellContentClick;
             // 
@@ -1850,9 +1758,9 @@
             tpCapNhatNV.Controls.Add(label10);
             tpCapNhatNV.Controls.Add(label13);
             tpCapNhatNV.Controls.Add(label14);
-            tpCapNhatNV.Location = new Point(4, 30);
+            tpCapNhatNV.Location = new Point(4, 24);
             tpCapNhatNV.Name = "tpCapNhatNV";
-            tpCapNhatNV.Size = new Size(960, 585);
+            tpCapNhatNV.Size = new Size(960, 591);
             tpCapNhatNV.TabIndex = 2;
             tpCapNhatNV.Text = "Cập nhật nhân viên";
             tpCapNhatNV.UseVisualStyleBackColor = true;
@@ -1860,7 +1768,7 @@
             // btnResetNV_CN
             // 
             btnResetNV_CN.Anchor = AnchorStyles.Bottom;
-            btnResetNV_CN.Location = new Point(621, 521);
+            btnResetNV_CN.Location = new Point(621, 527);
             btnResetNV_CN.Name = "btnResetNV_CN";
             btnResetNV_CN.Size = new Size(110, 39);
             btnResetNV_CN.TabIndex = 63;
@@ -1871,7 +1779,7 @@
             // btnSuaNV_CN
             // 
             btnSuaNV_CN.Anchor = AnchorStyles.Bottom;
-            btnSuaNV_CN.Location = new Point(487, 521);
+            btnSuaNV_CN.Location = new Point(487, 527);
             btnSuaNV_CN.Name = "btnSuaNV_CN";
             btnSuaNV_CN.Size = new Size(110, 39);
             btnSuaNV_CN.TabIndex = 62;
@@ -1882,7 +1790,7 @@
             // btnXoaNV_CN
             // 
             btnXoaNV_CN.Anchor = AnchorStyles.Bottom;
-            btnXoaNV_CN.Location = new Point(355, 521);
+            btnXoaNV_CN.Location = new Point(355, 527);
             btnXoaNV_CN.Name = "btnXoaNV_CN";
             btnXoaNV_CN.Size = new Size(110, 39);
             btnXoaNV_CN.TabIndex = 61;
@@ -1893,7 +1801,7 @@
             // btnThemNV_CN
             // 
             btnThemNV_CN.Anchor = AnchorStyles.Bottom;
-            btnThemNV_CN.Location = new Point(230, 521);
+            btnThemNV_CN.Location = new Point(230, 527);
             btnThemNV_CN.Name = "btnThemNV_CN";
             btnThemNV_CN.Size = new Size(110, 39);
             btnThemNV_CN.TabIndex = 60;
@@ -1913,7 +1821,7 @@
             dgNV_CN.Name = "dgNV_CN";
             dgNV_CN.ReadOnly = true;
             dgNV_CN.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgNV_CN.Size = new Size(954, 380);
+            dgNV_CN.Size = new Size(954, 386);
             dgNV_CN.TabIndex = 59;
             dgNV_CN.CellContentClick += dgNV_CN_CellContentClick;
             // 
@@ -1974,25 +1882,16 @@
             label14.TabIndex = 51;
             label14.Text = "Mã nhân viên:";
             // 
-            // tpCapNhatHD
-            // 
-            tpCapNhatHD.Location = new Point(4, 30);
-            tpCapNhatHD.Name = "tpCapNhatHD";
-            tpCapNhatHD.Size = new Size(960, 585);
-            tpCapNhatHD.TabIndex = 3;
-            tpCapNhatHD.Text = "Cập nhật hóa đơn";
-            tpCapNhatHD.UseVisualStyleBackColor = true;
-            // 
             // tpTimKiem
             // 
             tpTimKiem.Controls.Add(cbxTimKiem);
             tpTimKiem.Controls.Add(tbTimKiem);
             tpTimKiem.Controls.Add(dgTimKiem);
-            tpTimKiem.Location = new Point(4, 30);
+            tpTimKiem.Location = new Point(4, 24);
             tpTimKiem.Margin = new Padding(4);
             tpTimKiem.Name = "tpTimKiem";
             tpTimKiem.Padding = new Padding(4);
-            tpTimKiem.Size = new Size(976, 627);
+            tpTimKiem.Size = new Size(976, 633);
             tpTimKiem.TabIndex = 1;
             tpTimKiem.Text = "Tìm kiếm";
             tpTimKiem.UseVisualStyleBackColor = true;
@@ -2028,7 +1927,7 @@
             dgTimKiem.Name = "dgTimKiem";
             dgTimKiem.ReadOnly = true;
             dgTimKiem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgTimKiem.Size = new Size(596, 598);
+            dgTimKiem.Size = new Size(596, 592);
             dgTimKiem.TabIndex = 0;
             // 
             // tpThongKe
@@ -2044,7 +1943,6 @@
             // tcThongKe
             // 
             tcThongKe.Controls.Add(tpThongKeSach);
-            tcThongKe.Controls.Add(tpThongKeKH);
             tcThongKe.Dock = DockStyle.Fill;
             tcThongKe.Location = new Point(0, 0);
             tcThongKe.Name = "tcThongKe";
@@ -2054,6 +1952,9 @@
             // 
             // tpThongKeSach
             // 
+            tpThongKeSach.Controls.Add(label44);
+            tpThongKeSach.Controls.Add(dgThongKeSach);
+            tpThongKeSach.Controls.Add(cbxLoaiThongKe);
             tpThongKeSach.Location = new Point(4, 30);
             tpThongKeSach.Name = "tpThongKeSach";
             tpThongKeSach.Padding = new Padding(3);
@@ -2062,59 +1963,38 @@
             tpThongKeSach.Text = "Thống kê sách";
             tpThongKeSach.UseVisualStyleBackColor = true;
             // 
-            // tpThongKeKH
+            // label44
             // 
-            tpThongKeKH.Location = new Point(4, 24);
-            tpThongKeKH.Name = "tpThongKeKH";
-            tpThongKeKH.Padding = new Padding(3);
-            tpThongKeKH.Size = new Size(968, 599);
-            tpThongKeKH.TabIndex = 1;
-            tpThongKeKH.Text = "Thống kê khách hàng";
-            tpThongKeKH.UseVisualStyleBackColor = true;
+            label44.AutoSize = true;
+            label44.Location = new Point(6, 13);
+            label44.Name = "label44";
+            label44.Size = new Size(112, 21);
+            label44.TabIndex = 2;
+            label44.Text = "Thống kê theo:";
             // 
-            // btnReset_CN
+            // dgThongKeSach
             // 
-            btnReset_CN.Anchor = AnchorStyles.Bottom;
-            btnReset_CN.Location = new Point(621, 540);
-            btnReset_CN.Name = "btnReset_CN";
-            btnReset_CN.Size = new Size(110, 39);
-            btnReset_CN.TabIndex = 71;
-            btnReset_CN.Text = "Reset";
-            btnReset_CN.UseVisualStyleBackColor = true;
-            btnReset_CN.Click += btnResetSach_CN_Click;
+            dgThongKeSach.AllowUserToAddRows = false;
+            dgThongKeSach.AllowUserToDeleteRows = false;
+            dgThongKeSach.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgThongKeSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgThongKeSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgThongKeSach.Location = new Point(249, 3);
+            dgThongKeSach.MultiSelect = false;
+            dgThongKeSach.Name = "dgThongKeSach";
+            dgThongKeSach.ReadOnly = true;
+            dgThongKeSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgThongKeSach.Size = new Size(713, 590);
+            dgThongKeSach.TabIndex = 1;
             // 
-            // btnSua_CN
+            // cbxLoaiThongKe
             // 
-            btnSua_CN.Anchor = AnchorStyles.Bottom;
-            btnSua_CN.Location = new Point(487, 540);
-            btnSua_CN.Name = "btnSua_CN";
-            btnSua_CN.Size = new Size(110, 39);
-            btnSua_CN.TabIndex = 70;
-            btnSua_CN.Text = "Sửa";
-            btnSua_CN.UseVisualStyleBackColor = true;
-            btnSua_CN.Click += btnSuaSach_CN_Click;
-            // 
-            // btnXoa_CN
-            // 
-            btnXoa_CN.Anchor = AnchorStyles.Bottom;
-            btnXoa_CN.Location = new Point(355, 540);
-            btnXoa_CN.Name = "btnXoa_CN";
-            btnXoa_CN.Size = new Size(110, 39);
-            btnXoa_CN.TabIndex = 69;
-            btnXoa_CN.Text = "Xóa";
-            btnXoa_CN.UseVisualStyleBackColor = true;
-            btnXoa_CN.Click += btnXoaSach_CN_Click;
-            // 
-            // btnThem_CN
-            // 
-            btnThem_CN.Anchor = AnchorStyles.Bottom;
-            btnThem_CN.Location = new Point(230, 540);
-            btnThem_CN.Name = "btnThem_CN";
-            btnThem_CN.Size = new Size(110, 39);
-            btnThem_CN.TabIndex = 68;
-            btnThem_CN.Text = "Thêm";
-            btnThem_CN.UseVisualStyleBackColor = true;
-            btnThem_CN.Click += btnThemSach_CN_Click;
+            cbxLoaiThongKe.FormattingEnabled = true;
+            cbxLoaiThongKe.Items.AddRange(new object[] { "Mã sách", "Số lượng" });
+            cbxLoaiThongKe.Location = new Point(6, 37);
+            cbxLoaiThongKe.Name = "cbxLoaiThongKe";
+            cbxLoaiThongKe.Size = new Size(237, 29);
+            cbxLoaiThongKe.TabIndex = 0;
             // 
             // QLSACH
             // 
@@ -2164,6 +2044,9 @@
             ((System.ComponentModel.ISupportInitialize)dgTimKiem).EndInit();
             tpThongKe.ResumeLayout(false);
             tcThongKe.ResumeLayout(false);
+            tpThongKeSach.ResumeLayout(false);
+            tpThongKeSach.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgThongKeSach).EndInit();
             ResumeLayout(false);
         }
 
@@ -2177,7 +2060,6 @@
         private TabPage tpCapNhatSach;
         private TabPage tpCapNhatKH;
         private TabPage tpCapNhatNV;
-        private TabPage tpCapNhatHD;
         private DataGridView dgSach_CN;
         private DateTimePicker dtpNgayCN;
         private TextBox tbGia_CN;
@@ -2224,7 +2106,6 @@
         private DataGridView dgTimKiem;
         private TabControl tcThongKe;
         private TabPage tpThongKeSach;
-        private TabPage tpThongKeKH;
         private TabPage tpTaoPhieu;
         private TabPage tpHoaDon;
         private TabControl tcHoaDon;
@@ -2301,28 +2182,16 @@
         private TextBox tbMaPhieuThongKe;
         private Label label39;
         private Label label40;
-        private TextBox textBox9;
-        private Label label52;
         private Button button1;
         private Button button2;
         private Label label42;
         private TextBox textBox1;
         private Label label43;
         private TextBox textBox2;
-        private Label label44;
-        private TextBox textBox3;
-        private Label label45;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
         private TextBox textBox8;
         private Label label46;
         private Label label47;
-        private Label label48;
-        private Label label49;
-        private Label label50;
         private Label label51;
         private Button button3;
         private Button button4;
@@ -2339,5 +2208,8 @@
         private Button btnSua_CN;
         private Button btnXoa_CN;
         private Button btnThem_CN;
+        private Label label44;
+        private DataGridView dgThongKeSach;
+        private ComboBox cbxLoaiThongKe;
     }
 }

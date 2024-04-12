@@ -28,6 +28,7 @@ namespace QLSACH
         {
             dgSach_CN.DataSource = Load_Sach();
             cbxTimKiem.SelectedIndex = 0;
+            cbxLoaiThongKe.SelectedIndex = 0;
         }
         private void tcCapNhat_SelectedIndexChanged(object sender, EventArgs e)
         {
